@@ -39,7 +39,7 @@ public class User implements Serializable {
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    @JoinColumn(name = "userId", referencedColumnName = "userId", updatable = true)
     private List<Phone> phones;
 
     private LocalDateTime created;
