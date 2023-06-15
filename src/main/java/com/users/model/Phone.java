@@ -35,5 +35,5 @@ public class Phone implements Serializable {
     private String countrycode;
 
     @Column(name = "userId")
-    private Long userId;
+    private String userId;
 }
