@@ -2,6 +2,7 @@ package com.users.controller;
 
 import com.users.exception.UserException;
 import com.users.model.User;
+import com.users.dto.UserDto;
 import com.users.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/users")
 @RestController
@@ -27,20 +30,20 @@ public class UserController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<User> create(@Validated @RequestBody User user)
+    public ResponseEntity<UserDto> create(@Validated @RequestBody User user)
             throws UserException {
         return new ResponseEntity<>(userService.create(user), HttpStatus.CREATED);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<User> findAll() {
+    public List<UserDto> findAll() {
         return userService.findAll();
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(path = "/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public User findById(@PathVariable("userId") Long userId) {
+    public UserDto findById(@PathVariable("userId") Long userId) {
         return userService.findById(userId);
     }
 
@@ -52,8 +55,8 @@ public class UserController {
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<User> update(@Validated @RequestBody User user)
+    public ResponseEntity<UserDto> update(@Validated @RequestBody UserDto userDto)
             throws UserException {
-        return new ResponseEntity<>(userService.update(user), HttpStatus.CREATED);
+        return new ResponseEntity<>(userService.update(userDto), HttpStatus.CREATED);
     }
 }

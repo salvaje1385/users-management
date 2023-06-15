@@ -1,7 +1,6 @@
 package com.users.dto;
 
 import com.users.model.Phone;
-import java.time.LocalDateTime;
 import java.util.List;
 import javax.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -28,13 +27,4 @@ public class UserDto {
 
     private List<Phone> phones;
 
-    private LocalDateTime created;
-
-    private LocalDateTime modified;
-
-    private LocalDateTime lastLogin;
-
-    private String token;
-
-    private Boolean isActive;
 }

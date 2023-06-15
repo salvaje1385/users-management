@@ -1,17 +1,20 @@
 package com.users.service;
 
+import com.users.dto.UserDto;
 import com.users.exception.UserException;
 import com.users.model.User;
 
+import java.util.List;
+
 public interface IUserService {
 
-    User create(User user) throws UserException;
+    UserDto create(User user) throws UserException;
 
-    Iterable<User> findAll();
+    List<UserDto> findAll();
 
-    User findById(final Long userId);
+    UserDto findById(final Long userId);
 
     void delete(final Long userId);
 
-    User update(final User user);
+    UserDto update(final UserDto user);
 }
