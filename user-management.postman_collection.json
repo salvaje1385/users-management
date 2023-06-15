@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "24c6414c-93e4-4908-9a89-9d01a57daa41",
+		"name": "user-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/{userId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users/43726b7b-5dfc-40f0-aa88-b0a47f3173ac",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"43726b7b-5dfc-40f0-aa88-b0a47f3173ac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/{userId}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users/16f50258-351a-48ad-b636-55830fbacaf1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"16f50258-351a-48ad-b636-55830fbacaf1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Pedro Gonzalez\",\n    \"email\": \"pgonzalez@gmail.com.com\",\n    \"password\": \"pgonD!fs1588\",\n    \"phones\": [\n        {\n            \"number\": \"841616514\",\n            \"citycode\": \"1\",\n            \"countrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"pgonzalez@gmail.com.com\",\n    \"password\": \"pgonD!fs1588\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"43726b7b-5dfc-40f0-aa88-b0a47f3173ac\",\n    \"name\": \"3Pedro Gonzalez\",\n    \"email\": \"$2a$10$psumYwH6OsV/i4GXKduqQuP56b9qmaIdvHrGqYo/Gj8hRFHRNQ3R.\",\n    \"password\": \"pgonD!fs1588\",\n    \"phones\": [\n        {\n            \"phoneId\": 1,\n            \"number\": \"38416165\",\n            \"citycode\": \"31\",\n            \"countrycode\": \"357\",\n            \"userId\": \"16f50258-351a-48ad-b636-55830fbacaf1\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZ29uemFsZXpAZ21haWwuY29tLmNvbSIsImlhdCI6MTY4Njg1OTEwNSwiZXhwIjoxNjg2ODU5NjA1fQ.7700ZnSzijlYGnKwi4uxkDnKMmzyfmW2nuLy-_CGBbY",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
