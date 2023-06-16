@@ -63,3 +63,8 @@ Note that you need to paste the token in the Authorization text box using the pr
 
 ![Screenshot_20230615_140215](https://github.com/salvaje1385/users-management/assets/36721058/a31b8d4a-5c6c-4a99-8f85-d633425c2c2c)
 
+# Sequence Diagram
+
+![Screenshot_20230615_183952](https://github.com/salvaje1385/users-management/assets/36721058/b80a3f57-f9ac-44bb-bafd-aaba5de7e07a)
+
+
