@@ -55,6 +55,7 @@ This is the list of available endpoints:
 
 4. Take into account that when testing the "**PUT** users" endpoint, you won't be able to update the userId, email or password.
 
+
 # Test with Swagger-ui
 
 You can test the application using Swagger (http://localhost:8080/swagger-ui.html). Here you can follow the same steps mentioned above: Create the user, login, and use the token to hit the other endpoints.
@@ -63,8 +64,9 @@ Note that you need to paste the token in the Authorization text box using the pr
 
 ![Screenshot_20230615_140215](https://github.com/salvaje1385/users-management/assets/36721058/a31b8d4a-5c6c-4a99-8f85-d633425c2c2c)
 
+
 # Sequence Diagram
 
-![Screenshot_20230615_183952](https://github.com/salvaje1385/users-management/assets/36721058/b80a3f57-f9ac-44bb-bafd-aaba5de7e07a)
+![Screenshot_20230615_185255](https://github.com/salvaje1385/users-management/assets/36721058/12bde8b5-70b3-49e5-b32e-2ec808b6c5fa)
 
 
